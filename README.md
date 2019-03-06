@@ -2,9 +2,6 @@
 
 ![alt text](https://github.com/abuznego23/credit-card-form/blob/master/demo.png)
 
-## Demo
-https://liveweave.com/DmBJiX
-
 ## Requirements:
 * Vanilla JS, HTML, CSS
 * Buttons Enabled or Disabled
