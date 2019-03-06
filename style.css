@@ -1,1 +1,238 @@
-
+body{
+	font-family: Arial;
+}
+label{
+	font-weight: bold;
+	display: inline-block;
+}
+label.error{
+	color: #e55;
+}
+input{
+	width: 350px;
+	font-size: 1em;
+	padding: 10px;
+}
+input:focus {
+    outline: none !important;
+    border: 2px solid rgb(204, 170, 51);
+    box-shadow: 0 0 10px rgb(204, 170, 51);
+}
+input.error{
+	border: 2px solid #e55;
+	background-color: #fee;
+}
+.card-display{
+	background-color: white;
+	margin: 0 auto;
+	width: 100%;
+	height: 100%;
+	border: 5px solid rgb(204, 170, 51);
+	box-sizing: border-box;
+	border-radius: 10px;
+	position: absolute;
+	backface-visibility: hidden;
+}
+.back-face{
+	transform: rotateY(180deg);
+}
+.card.is-flipped{
+	transform: rotateY(180deg);
+}
+.tll{
+	color: #262;
+}
+.tlr{
+	color: #ca3;
+	font-style: italic;
+}
+#top-logo, #top-logo-caption{
+	font-weight: bold;
+	left: 20px;
+}
+#top-logo{
+	font-size: 2.65em;
+	top: 10px;
+}
+#top-logo-caption{
+	font-size: 0.58em;
+	top: 49px;
+}
+#chip{
+	left: 30px;
+	top: 70px;
+	height: 35px;
+}
+#card-number{
+	color: #ca3;
+	left: 30px;
+	top: 110px;
+	font-size: 1.40em;
+	letter-spacing: 1px;
+	font-weight: bold;
+}
+#gt-text{
+	color: #262;
+	font-size: 0.65em;
+	left: 90px;
+	bottom: 40px;
+}
+#exp-date{
+	color: #ca3;
+	left: 160px;
+	top: 160px;
+	letter-spacing: 1.35px;
+}
+#cardholder-name{
+	color: #ca3;
+	font-size: 1em;
+	left: 35px;
+	top: 185px;
+}
+#bottom-logo-front{
+	right: 10px;
+	bottom: 10px;
+	height: 50px;
+}
+#top-wrapper{
+	margin: 30px auto;
+	max-width: 3.55in;
+	height: 2.30in;
+	perspective: 10in;
+}
+.card{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transition: transform 1s;
+	transform-style: preserve-3d;
+}
+#input-form{
+	width: 375px;
+	margin: 0 auto;
+}
+.card-display div, .card-display img{
+	position: absolute;
+}
+#buttons-container{
+	text-align: center;
+	padding-top: 15px;
+	width: 100%;
+}
+.btn{
+	margin-top: 10px;
+	color: white;
+	font-size: 1.1em;
+	background-color: #262;
+	border-radius: 10px;
+	width: 180px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-color: #262;
+}
+.btn:hover{
+	color: #262;
+	background-color: #ca3;
+	border-color: #262;
+}
+.btn:disabled{
+	opacity: .5;
+	cursor: not-allowed;
+}
+.btn:disabled:hover{
+	background-color: #262;
+	color: white;
+}
+#stripe{
+	left: 0;
+	top: 10px;
+	width: 100%;
+	height: 40px;
+	background: #262;
+}
+#title{
+	font-weight: bold;
+	top: 117px;
+	left: 100px;
+}
+#address{
+	font-size: 0.8em;
+	top: 135px;
+	left: 100px;
+}
+#phone{
+	font-size: 0.8em;
+	top: 168px;
+	left: 100px;
+}
+#website{
+	font-size: 0.8em;
+	top: 184px;
+	left: 100px;
+}
+#bottom-logo-back{
+	left: 30px;
+	bottom: 50px;
+	height: 60px;
+}
+#signature-box{
+	left: 20px;
+    top: 60px;
+    width: 225px;
+    height: 28px;
+    padding-top: 5px;
+    background-size: 20px 20px;
+    font-family: 'Comic Sans MS';
+	background-image: linear-gradient(0deg,#afa 25%,#9e9 25%,#9e9 50%,#afa 50%,#afa 75%,#9e9 75%,#9e9 100%);
+}
+#security-code{
+	background-color: #afa;
+	padding: 3px;
+	left: 245px;
+    top: 65px;
+    min-width: 35px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+}
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 15px;
+  border: 1px solid #888;
+  width: 400px;
+  white-space: pre;
+}
+.close {
+  color: rgb(34, 102, 34);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+.close:hover,
+.close:focus {
+  cursor: pointer;
+}
+.dn{
+	display: none;
+}
+.bank-logo{
+	left: 10px;
+	top: 10px;
+}
+.msg{
+	float: right;
+	color: #e55;
+	font-size: 0.8em;
+}
+.input-field{
+	padding-bottom: 10px;
+}

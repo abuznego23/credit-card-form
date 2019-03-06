@@ -1,1 +1,106 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="style.css">
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<div id="entry-container">
+			<div id="top-wrapper">
+				<div class="card" onclick="flipCard()">
+					<div class="card-display front-face">
+						<div id="top-logo">
+							<span class="tll">Taba</span><span class="tlr">Pay</span>
+						</div>
+						<div id="top-logo-caption">
+							<span class="tll">There and back again</span>
+							<span class="tlr">Payments</span>
+						</div>
+						<img id="BA-logo" class="top-logo bank-logo dn" src="https://www.tabapay.com/CI/BA.png">
+						<img id="WF-logo" class="top-logo bank-logo dn" src="https://www.tabapay.com/CI/WF.png">
+						<img id="chip" src="https://www.tabapay.com/CI/Chip.png">
+						<div id="card-number">●●●● ●●●● ●●●● ●●●●</div>
+						<div id="gt-text">Good Thru &#9654;</div>
+						<div id="exp-date">●●/●●</div>
+						<div id="cardholder-name">TabaPay Customer</div>
+						<img id="bottom-logo-front" src="https://www.tabapay.com/CI/TabaPay.png">
+					</div>
+					<div class="card-display back-face">
+						<div id=stripe></div>
+						<div id="signature-box"></div>
+						<div id="security-code">●●●</div>
+						<img id="bottom-logo-back" src="https://www.tabapay.com/CI/TabaPay.png">
+						<div id="title">
+							<span class="tll">Taba</span><span class="tlr">Pay</span>
+						</div>
+						<div id="address">
+							465 Fairchild Drive  Suite #222
+							<br>
+							Mountain View, CA 94043
+						</div>
+						<div id="phone">
+							+1 415-980-8222
+						</div>
+						<div id="website">
+							www.<span class="tll">taba</span><span class="tlr">pay</span>.com
+						</div>
+					</div>
+				</div>
+			</div>
+			<form name="input-form" id="input-form">
+					<div class="input-field">
+						<div>
+							<label for="text" id="l1">Card Number</label>
+							<span class="msg dn" id="m1">Please enter your Card Number.</span>
+						</div>
+						<input name="card-number" type="text" minlength="17" maxlength="23" placeholder="13-19 digits" id="i1" required>
+					</div>
+					<div class="input-field">
+						<div>
+							<label for="text" id="l2">Expiration Date</label>
+							<span class="msg dn" id="m2">Please enter your Expiration Date.</span>
+						</div>
+						<input name="exp-date" type="text" placeholder="MM/YY format" maxlength="5" id="i2" required>
+					</div>
+					<div class="input-field">
+						<div>
+							<label for="text" id="l3">Security Code</label>
+							<span class="msg dn" id="m3">Please enter your Security Code.</span>
+						</div>
+						<input name="sec-code" type="text" maxlength="4" placeholder="Optional 3-4 digits" onfocus='!card.classList.contains("is-flipped") &&flipCard();' id="i3">
+					</div>
+					<div class="input-field">
+						<div>
+							<label for="text">Name</label>
+						</div>
+						<input name="name" type="text" placeholder="Cardholder Name" id="i4" required>
+					</div>
+					<div id="buttons-container">
+						<button type="reset" id="b1" class="btn" onclick="clearForm()" disabled>Clear</button>
+						<button type="button" id="b2" class="btn get-data" onclick="showCardData()" disabled>Get Card Data</button>
+						<button type="button" class="btn">Cancel</button>
+					</div>
+			</form>
+		</div>
+		<div id="alert-modal" class="modal">
+			<div class="modal-content">
+				<span class="close">&times;</span>
+				<p id="modal-text"></p>
+			</div>
+		</div>
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
