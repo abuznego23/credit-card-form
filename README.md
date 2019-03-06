@@ -10,3 +10,5 @@
 * Change title on top when entering a:
     Bank of America, such as 400390... Wells Fargo, such as 407110...Other card...
 * Display all form data using a modal box
+
+Produced in Chrome browser
